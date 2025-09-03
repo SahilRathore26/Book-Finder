@@ -48,11 +48,11 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-screen flex justify-between z-20">
+    <div className="w-full h-14 md:h-16 bg-gradient-to-r from-[#fdf6e3] via-[#e6f0f9] to-[#cce7f5] flex items-center justify-between px-4 md:px-4 fixed top-0 z-20 shadow-md">
       <Link to="/browse">
         <button>
           <img
-            className="mx-2 w-14 md:w-24"
+            className="w-12 md:w-20 "
             src={logo}
             alt="logo"
           ></img>
@@ -60,7 +60,9 @@ const Header = () => {
       </Link>
       {user && (
         <button
-          className="mr-6 mt-6 p-2 h-1/2 md:p-2 bg-red-700 text-xs md:text-sm font-bold text-white rounded-sm md:rounded-lg"
+          className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-700
+                   text-white font-semibold text-xs md:text-sm
+                   rounded-md shadow-md transition-all duration-200"
           onClick={handleSignOut}
         >
           Sign Out

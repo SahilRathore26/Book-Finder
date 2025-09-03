@@ -1,5 +1,5 @@
 import Header from "./Header";
-import bgImg from "../images/ChatGPT Image Sep 1, 2025, 04_41_02 PM.png";
+import bgImg from "../images/Book Finder Bg Image.png";
 import { useRef, useState } from "react";
 import { checkValidData } from "../utils/validate";
 import {
@@ -75,13 +75,13 @@ const Login = () => {
       </div>
       <div className="flex m-auto justify-center">
         <form
-          className="absolute w-[360px] md:w-[420px] py-12 px-10 md:px-16 mt-24 md:mt-32 justify-center bg-gray-900/80 text-white bg-opacity-80 rounded-md"
+          className="absolute w-[360px] md:w-[420px] py-12 px-10 md:px-16 mt-24 md:mt-32 justify-center bg-white/30 backdrop-blur-md text-gray-900 rounded-2xl shadow-xl"
           onSubmit={(e) => e.preventDefault()}
         >
-          <h1 className="font-bold text-3xl mb-2">
+          <h1 className="font-bold text-3xl mb-2 text-gray-900">
             {signInForm ? "Welcome Back 👋" : "Create Your Account 🚀"}
           </h1>
-          <p className="text-gray-400 mb-5 text-sm">
+          <p className="text-gray-600 mb-5 text-sm">
             {signInForm
               ? "Sign in to continue discovering your next favorite book."
               : "Join BookFinder and explore millions of books worldwide."}
@@ -91,32 +91,32 @@ const Login = () => {
               ref={name}
               type="text"
               placeholder="Enter Full Name"
-              className="my-2 p-4 w-full bg-gray-800 text-white placeholder-gray-400 rounded-md bg-opacity-75"
+              className="my-2 p-4 w-full bg-white/60 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
             ></input>
           )}
           <input
             ref={email}
             type="text"
             placeholder="Email or mobile number"
-            className="my-2 p-4 w-full bg-gray-800 text-white placeholder-gray-400 rounded-md bg-opacity-75"
+            className="my-2 p-4 w-full bg-white/60 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
           ></input>
           <input
             ref={password}
             type="password"
             placeholder="Password"
-            className="my-2 p-4 w-full bg-gray-800 text-white placeholder-gray-400 rounded-md bg-opacity-75"
+            className="my-2 p-4 w-full bg-white/60 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300"
           ></input>
           <p className="text-md font-bold text-red-600 my-2">{errorMessage}</p>
           <button
-            className="my-4 p-3 w-full text-sm font-semibold bg-red-700 rounded-md"
+            className="my-4 p-3 w-full text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white rounded-md transition-all duration-200"
             onClick={handleSignInButton}
           >
             Sign In
           </button>
-          <p className="text-gray-400 my-5">
+          <p className="text-gray-600 my-5">
             {signInForm ? "New to Book Finder? " : "Already a user? "}{" "}
             <span
-              className="text-white font-bold cursor-pointer"
+              className="text-red font-bold cursor-pointer"
               onClick={toggleToSignUp}
             >
               {signInForm ? "Sign up now" : "Sign in now"}

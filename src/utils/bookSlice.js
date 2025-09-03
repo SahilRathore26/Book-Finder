@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const bookSlice = createSlice({
   name: "book",
   initialState: {
-    items: [],
+    items: null,
   },
   reducers: {
     setBooks: (state, action) => {
       state.items = action.payload;
     },
     removeBooks: (state, action) => {
-      state.items = [];
+      state.items = null;
     }
   },
 });

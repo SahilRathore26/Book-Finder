@@ -25,7 +25,7 @@ const BookSearchBar = () => {
           placeholder="Enter Book Name"
         ></input>
         <button
-          className="m-2 p-2 px-6 h-10 bg-red-700 text-sm text-white ml-2 rounded-sm"
+          className="m-2 p-2 px-6 h-10 bg-amber-500 hover:bg-amber-600  text-sm text-white ml-2 rounded-sm"
           onClick={handleSearchClick}
         >
           Search
