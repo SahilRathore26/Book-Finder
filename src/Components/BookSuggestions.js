@@ -1,9 +1,16 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 const BookSuggestions = () => {
-  const books = useSelector((store) => store.book.items);
-  console.log(books);
+  const {items: books, loading } = useSelector((store) => store.book);
+
+  if (loading) {
+    return (
+      <Shimmer />
+    );
+  }
 
   if (books === null) {
     return (
@@ -20,7 +27,7 @@ const BookSuggestions = () => {
 
   if (books.length === 0) {
     return (
-      <p className="py-4 text-gray-500 text-lg italic text-center">
+      <p className="py-4 px-2 text-gray-500 text-sm md:text-lg italic text-center">
         Oops 😅 No matches found. Try searching again!
       </p>
     );
@@ -52,6 +59,9 @@ const BookSuggestions = () => {
                 <p className="text-xs text-gray-500">
                   First published: {book.first_publish_year || "N/A"}
                 </p>
+                <span className="mt-2 text-blue-600 text-sm font-medium">
+                  View Details →
+                </span>
               </div>
             </div>
           </Link>

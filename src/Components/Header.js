@@ -51,25 +51,24 @@ const Header = () => {
     <div className="w-full h-14 md:h-16 bg-gradient-to-r from-[#fdf6e3] via-[#e6f0f9] to-[#cce7f5] flex items-center justify-between px-4 md:px-4 fixed top-0 z-20 shadow-md">
       <Link to="/browse">
         <button>
-          <img
-            className="w-12 md:w-20 "
-            src={logo}
-            alt="logo"
-          ></img>
+          <img className="w-12 md:w-20 " src={logo} alt="logo"></img>
         </button>
       </Link>
       {user && (
-        <button
-          className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-700
+        <div className="flex">
+          <p className="px-2 md:px-4 pt-1 md:pt-1.5 text-xs md:text-sm">Hello {user.displayName}</p>
+          <button
+            className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-600 hover:bg-blue-700
                    text-white font-semibold text-xs md:text-sm
                    rounded-md shadow-md transition-all duration-200"
-          onClick={handleSignOut}
-        >
-          Sign Out
-        </button>
+            onClick={handleSignOut}
+          >
+            Sign Out
+          </button>
+        </div>
       )}
     </div>
-  )
+  );
 };
 
 export default Header;
