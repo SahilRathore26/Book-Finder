@@ -111,7 +111,7 @@ const Login = () => {
             className="my-4 p-3 w-full text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white rounded-md transition-all duration-200"
             onClick={handleSignInButton}
           >
-            Sign In
+            {signInForm ? "Sign Up" : "Sign In"}
           </button>
           <p className="text-gray-600 my-5">
             {signInForm ? "New to Book Finder? " : "Already a user? "}{" "}
