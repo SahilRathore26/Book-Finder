@@ -75,7 +75,7 @@ const Login = () => {
       </div>
       <div className="flex m-auto justify-center">
         <form
-          className="absolute w-[360px] md:w-[420px] py-12 px-10 md:px-16 mt-24 md:mt-32 justify-center bg-white/30 backdrop-blur-md text-gray-900 rounded-2xl shadow-xl"
+          className="absolute w-[360px] md:w-[420px] py-12 px-10 md:px-16 mt-24 md:mt-32 justify-center bg-white/30 text-gray-900 rounded-2xl shadow-xl"
           onSubmit={(e) => e.preventDefault()}
         >
           <h1 className="font-bold text-3xl mb-2 text-gray-900">
@@ -111,7 +111,7 @@ const Login = () => {
             className="my-4 p-3 w-full text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white rounded-md transition-all duration-200"
             onClick={handleSignInButton}
           >
-            {signInForm ? "Sign Up" : "Sign In"}
+            {signInForm ? "Sign In" : "Sign Up"}
           </button>
           <p className="text-gray-600 my-5">
             {signInForm ? "New to Book Finder? " : "Already a user? "}{" "}
